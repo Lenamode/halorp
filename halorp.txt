@@ -1,0 +1,7 @@
+"halo"
+{
+	"base"		"nutscript"
+	"title"		"Halo Roleplay"
+	"author"	"Sixx"
+	"menusystem" "1"
+}

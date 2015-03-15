@@ -1,0 +1,7 @@
+// Extracted with MulleDK19's GMAD Extractor
+"AddonInfo"
+{
+	"name" "Halo 3: ODST NPS"
+	"author_name" "Unknown"
+	"info" ""
+}
