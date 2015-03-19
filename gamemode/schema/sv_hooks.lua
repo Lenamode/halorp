@@ -1,21 +1,3 @@
-function SCHEMA:GetDefaultInv(inventory, client, data)
-	-- PrintTable(data) to see what information it contains.
-	
-	if (data.faction == FACTION_RECRUIT) then
-		inventory:Add("cid", 1, {
-			Digits = math.random(11111, 99999),
-			Owner = data.charname
-		})
-end
-if (data.faction == FACTION_MARINE or data.faction == FACTION_ODST) then
-			inventory:Add("assaultrifle", 1)
-			inventory:Add("AR Rounds", 1)
-
-		end	
-
-	end
-end
-
 -- Called when the default armour is needed
 function SCHEMA:PlayerSpawn(client)
 	if (client:Team() == FACTION_SPARTAN) then
@@ -33,7 +15,6 @@ function SCHEMA:PlayerSpawn(client)
 			client:SetArmor(150)
 		end
 	end
--- Baby Spartans
 
 function SCHEMA:PlayerSpawn(client)
 	if (client:Team() == FACTION_MARINE) then
@@ -42,7 +23,7 @@ function SCHEMA:PlayerSpawn(client)
 			client:SetArmor(100)
 		end
 	end
--- Prevents death by way of noscope NPC
+
 
 function SCHEMA:PlayerFootstep(client, position, foot, soundName, volume)
 	if (client:IsRunning()) then
@@ -58,7 +39,3 @@ function SCHEMA:PlayerFootstep(client, position, foot, soundName, volume)
 	end
 end
 
-
-function SCHEMA:PlayerSpawn(client)
-	print("Hello, world.")
-end
